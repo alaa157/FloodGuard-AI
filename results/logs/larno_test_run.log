@@ -1,0 +1,33 @@
+/usr/bin/python3 test.py --config urbanflood_config_2d.yaml --expr_id 20260220_183648_006352 --data_root /content/LarNO/benchmark/urbanflood --exp_root /content/LarNO/exp --device 0 --data.test_list region1_test_subset.txt
+
+Testing experiment: 20260220_183648_006352
+Loading checkpoint: /content/LarNO/exp/20260220_183648_006352/weights/model_epoch_992_error@0.000055821/model_epoch_992_error@0.000055821_state_dict.pt  (epoch=992)
+Loaded Dynamic2DFlood test with 2 samples (location:region1_20m, locations:1, events:2)
+Processing test sample 0, event_name: event65
+Prediction time for sample 0: 10.299780607 seconds
+{'event65': {'R2': 0.9936076275923019, 'MSE': 1.696483143823698e-05, 'RMSE': 0.004118838724475259, 'MAE': 0.001987642771181494, 'PeakR2': 0.9863460047634967, 'CSI': 0.8463332653045654}}
+Saved visualization to /content/LarNO/exp/20260220_183648_006352/visualization/region1_20m/epoch_992/visualization_epoch_992_sample_event65.png
+Saved comparison GIF to /content/LarNO/exp/20260220_183648_006352/visualization/region1_20m/epoch_992/event65_epoch992.gif
+Processing test sample 1, event_name: event66
+Prediction time for sample 1: 9.486551046 seconds
+{'event65': {'R2': 0.9936076275923019, 'MSE': 1.696483143823698e-05, 'RMSE': 0.004118838724475259, 'MAE': 0.001987642771181494, 'PeakR2': 0.9863460047634967, 'CSI': 0.8463332653045654}, 'event66': {'R2': 0.9937786966429464, 'MSE': 1.7318670492925286e-05, 'RMSE': 0.004161570796337038, 'MAE': 0.0020354272514131896, 'PeakR2': 0.9868527104306115, 'CSI': 0.8524054288864136}}
+Saved visualization to /content/LarNO/exp/20260220_183648_006352/visualization/region1_20m/epoch_992/visualization_epoch_992_sample_event66.png
+Saved comparison GIF to /content/LarNO/exp/20260220_183648_006352/visualization/region1_20m/epoch_992/event66_epoch992.gif
+Evaluation metrics by event:
+event65 {'R2': 0.9936076275923019, 'MSE': 1.696483143823698e-05, 'RMSE': 0.004118838724475259, 'MAE': 0.001987642771181494, 'PeakR2': 0.9863460047634967, 'CSI': 0.8463332653045654}
+event66 {'R2': 0.9937786966429464, 'MSE': 1.7318670492925286e-05, 'RMSE': 0.004161570796337038, 'MAE': 0.0020354272514131896, 'PeakR2': 0.9868527104306115, 'CSI': 0.8524054288864136}
+Summary: {'mean': {'R2': 0.9936931621176242, 'MSE': 1.7141750965581133e-05, 'RMSE': 0.004140204760406148, 'MAE': 0.0020115350112973416, 'PeakR2': 0.9865993575970541, 'CSI': 0.8493693470954895}, 'std': {'R2': 8.553452532222838e-05, 'MSE': 1.7691952734415304e-07, 'RMSE': 2.1366035930889433e-05, 'MAE': 2.3892240115847745e-05, 'PeakR2': 0.00025335283355742977, 'CSI': 0.0030360817909240723}}
+Per-event metrics: {'event65': {'R2': 0.9936076275923019, 'MSE': 1.696483143823698e-05, 'RMSE': 0.004118838724475259, 'MAE': 0.001987642771181494, 'PeakR2': 0.9863460047634967, 'CSI': 0.8463332653045654}, 'event66': {'R2': 0.9937786966429464, 'MSE': 1.7318670492925286e-05, 'RMSE': 0.004161570796337038, 'MAE': 0.0020354272514131896, 'PeakR2': 0.9868527104306115, 'CSI': 0.8524054288864136}}
+Overall summary: {'mean': {'R2': 0.9936931621176242, 'MSE': 1.7141750965581133e-05, 'RMSE': 0.004140204760406148, 'MAE': 0.0020115350112973416, 'PeakR2': 0.9865993575970541, 'CSI': 0.8493693470954895}, 'std': {'R2': 8.553452532222838e-05, 'MSE': 1.7691952734415304e-07, 'RMSE': 2.1366035930889433e-05, 'MAE': 2.3892240115847745e-05, 'PeakR2': 0.00025335283355742977, 'CSI': 0.0030360817909240723}}
+Done.
+location=region1_20m  time=78.46s
+
+--- STDERR ---
+/usr/local/lib/python3.13/dist-packages/tltorch/factorized_tensors/factorized_tensors.py:66: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  return self.__class__(self.tensor[indices])
+/content/LarNO/code/urbanflood_larfno/neuralop/layers/spectral_convolution.py:470: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  out_fft[slices_x] = self._contract(x[slices_x], weight, separable=self.separable)
+/usr/local/lib/python3.13/dist-packages/tltorch/factorized_tensors/factorized_tensors.py:66: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  return self.__class__(self.tensor[indices])
+/content/LarNO/code/urbanflood_larfno/neuralop/layers/spectral_convolution.py:470: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  out_fft[slices_x] = self._contract(x[slices_x], weight, separable=self.separable)
